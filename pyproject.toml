@@ -1,0 +1,26 @@
+[tool.ruff]
+# Keep configuration minimal and non-opinionated; can be tightened later.
+line-length = 100
+target-version = "py311"
+
+# Enable a small-but-useful ruleset.
+lint.select = [
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "I",  # isort
+]
+
+# Common directories to exclude.
+exclude = [
+  ".git",
+  ".venv",
+  "venv",
+  "__pycache__",
+  "build",
+  "dist",
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+known-first-party = []
